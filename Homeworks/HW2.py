@@ -4,7 +4,14 @@ while (0>sayi or sayi>10) :
     sayi=int(input("Tek basamaklı bir sayı giriniz : "))
 for i in range(0,sayi,2):
     print(i,end=" ")
-
+#eğer mod ifadesinin kullanımı görülmek isteniyorsa bu satırlar çalıştırılabilir..
+"""    
+for i in range(0,sayi+1):
+    if (i%2==0):
+        print(i,end=" ")
+"""
+    
+    
 #girilen sayı tamsayı mı kontrolü yapan versiyon 2
 while True :
     try:
@@ -19,3 +26,9 @@ while True :
 
 for i in range(0,sayi,2):
     print(i,end=" ")
+#eğer mod ifadesinin kullanımı görülmek isteniyorsa bu satırlar çalıştırılabilir..
+"""    
+for i in range(0,sayi+1):
+    if (i%2==0):
+        print(i,end=" ")
+"""
