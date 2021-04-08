@@ -1,4 +1,4 @@
-#birinci yöntem sabit bir dizi üzeirnde bölme ve yazdırma işlemi
+#birinci yöntem sabit bir dizi üzerinde bölme ve yazdırma işlemi
 dizi=list(range(10))
 print("dizinin orjinal hali")
 print (dizi)
@@ -8,7 +8,7 @@ print("\nbölümüş diziler")
 print(dizi2,dizi1)
 
 #------------------------------------------------------------------------------------------------------------------------------
-#ikinci yöntem kullanıc tarafından uzunluğu belirlenen bir dizinin ortadan ölme ve yazdırma işlemi
+#ikinci yöntem kullanıc tarafından uzunluğu belirlenen bir dizinin ortadan bölme ve yazdırma işlemi
 kac=int(input("Dizi kaç elemanlı olsun : "))
 dizi=list(range(kac))
 print("dizinin orjinal hali")
