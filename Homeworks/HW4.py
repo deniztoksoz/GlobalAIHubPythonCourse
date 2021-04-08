@@ -14,11 +14,13 @@ for i in range(1,6):
     notlar.append((s["ad"],s["donemnotu"]))
 
 #öğrenciler kütüphanesi
-print(ogrbilgi)
+print("Öğrenci Bilgileri Kütüphanesi")
+print(ogrbilgi,"\n")
 
 #notlar dizisi-listesi(öğrenci adları ve dönemm sonu notları)
-print(notlar)
+print("öğrenci adları ve dönemm sonu notları")
+print(notlar,"\n")
 
 #notlar dizisinin en büyük not en başta en küçük en sonda olarak sıralanmış hali
+print("öğrenci adları ve dönemm sonu notları sıralı hali")
 print(sorted(notlar,key=itemgetter(1),reverse=True))
-
