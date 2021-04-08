@@ -1,3 +1,4 @@
+#versiyon 1 - Sadece tek basamak kontrolü yapan kodlama
 sayi=int(input("Tek basamaklı bir sayı giriniz : "))
 while (0>sayi or sayi>10) :
     print("Girdiğiniz sayı tek basamaklı olmadır.")
@@ -13,7 +14,7 @@ for i in range(0,sayi+1):
 """
     
     
-#girilen sayı tamsayı mı kontrolü yapan versiyon 2
+#versiyon 2 - girilen sayı tamsayı mı kontrolü yapan kodlama
 while True :
     try:
         sayi=int(input("Tek basamaklı bir sayı giriniz : "))
