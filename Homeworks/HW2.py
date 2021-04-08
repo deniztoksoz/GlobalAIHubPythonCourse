@@ -13,7 +13,7 @@ for i in range(0,sayi+1):
         print(i,end=" ")
 """
     
-    
+#----------------------------------------------------------------------------------------------------------------    
 #versiyon 2 - girilen sayı tamsayı mı kontrolü yapan kodlama
 while True :
     try:
