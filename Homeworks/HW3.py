@@ -1,4 +1,4 @@
-#Yöntem 1
+#Yöntem 1 - kullanıcı adı ve şifre aynı anda kontrol ediliyor..
 kontrol=0
 while True:
     kadi=input("Kullanıcı Adınızı Giriniz : ")
@@ -17,7 +17,7 @@ while True:
         print("Sisteme kayıtlı değilsiniz.")
         break
 #------------------------------------------------------------------------------------------------------------------
-#Yöntem 2
+#Yöntem 2 - Önce kullanıcı adı sonra şifre kontrolü yapılıyor..
 kontrol=0
 kadi=input("Kullanıcı Adınızı Giriniz : ")
 if(kadi=="dt"):
