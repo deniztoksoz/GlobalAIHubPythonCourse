@@ -5,7 +5,7 @@ def soruekle():
     cevap=input("Cevabı yazınız : ")
     if input("Bu <%s> sorusuna ait <%s> cevabı ekleyelim mi? (e/h)" %(soru,cevap)).lower()=="e":
       sorular.append((soru,cevap))
-    if input("Devam etmek istermisiniz? (e/h)").lower()!="e":
+    if input("Soru eklemeye devam etmek istermisiniz? (e/h)").lower()!="e":
       break
 
 def devammi():
@@ -35,7 +35,7 @@ sorular=[("Motorsuz uçağa ne ad verilir?","planör"),
  ("Çocukların en güzel sokak oyunlarının başında gelir. Bir kişinin gözlerinin bağlanarak diğer oyuncuları yakalamaya çalıştığı oyunun adı nedir?","körebe")]
 
 
-#yarışmacıyla tanışalım
+#yarışmacıyla tanışalım ve açıklamalar
 ad=input("Yarışmamıza hoş geldiniz. İsminiz nedir? : ")
 print("Merhaba %s, sana toplamda %i soru soracağım. Bu sorulardan en az %i tanesine doğru cevap verirsen yarışmayı kazanmış olacaksın." %(ad.upper(),ssayi,ssayi/2))
 print("Eğer istersen yarışmayı kazandığında soru bankamıza sende soru ekleyebilirsin..")
@@ -48,6 +48,7 @@ while devam:
   #yarışmacıya sorulacak soruları seçelim..
   ysoru=[]
   soruid=[]
+  yanlis=[]
   while (len(soruid)<ssayi):
     id=rd.randint(0,len(sorular)-1)
     if id in soruid:
@@ -63,9 +64,13 @@ while devam:
     if cevap==ysoru[i][1]:
       dogru+=1
       puan+=100/ssayi
+    else:
+      yanlis.append(i+1)
       
   if dogru>=ssayi/2:
-    print("Tebrikler.. Yarışmayı toplam %i puanla kazandınız.." %int(puan))
+    print("%s, Tebrikler.. Yarışmayı toplam %i puanla kazandınız.." %(ad.upper(),int(puan)))
+    if len(yanlis)>0:
+      print("{:} numaralı sorulara yanlış cevap verdiniz.".format(yanlis))
     s=input("Yarışmaya yeni soru eklemek istermisiniz? (e/h) : ")
     if s.lower()=="e":
       soruekle()
@@ -74,6 +79,8 @@ while devam:
       devam=devammi()  
 
   else:
-    print("Üzgünüm başarısız oldunuz.")
+    print("Üzgünüm %s, başarısız oldunuz." %ad.upper())
+    print("Yarışmada sadece [%i] puan kazandınız.." %int(puan))
+    print("{:} numaralı sorulara yanlış cevap verdiniz.".format(yanlis))
     devam=devammi() 
   
