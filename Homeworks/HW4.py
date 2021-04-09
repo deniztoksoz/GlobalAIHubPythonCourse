@@ -38,7 +38,7 @@ print(notlar,"\n")
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#yöntem 2 sıralama için kütüphane kullanılıyor. öğrenci kütüphanesinde dönem sonu notları yazılıyor.
+#yöntem 2 sıralama için operator kütüphanesi kullanılıyor. öğrenci kütüphanesinde dönem sonu notları yazılıyor.
 #öğrenci adları kullanıcıdan alınıyor.. Randomize olarak 0 ile 100 arasında 3 adet not atanıyor. Dönem sonu notu hesaplanıyor..
 import random as rnd
 from operator import itemgetter
