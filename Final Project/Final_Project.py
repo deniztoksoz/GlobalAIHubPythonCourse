@@ -16,13 +16,14 @@ def devammi():
     print("Başka bir yarışmada görüşmek üzere...")
     return False
 
-ssayi=10   #sorulacak sayısı belirleme...
+ssayi=2   #sorulacak sayısı belirleme...
 devam=True  #yarışmacı çıkış yapana kadar devam et..
 puan=0
+
 sorular=[("Motorsuz uçağa ne ad verilir?","planör"),
  ("İzmit hangi tatlısıyla meşhurdur?","Pişmaniye"),
  ("Osmanlı medeni kanununna ne ad verilir?","Mecelle"),
- ("İki uca da eşit uzaklıkta olan yere nedir?","orta"),
+ ("İki uca da eşit uzaklıkta olan yere ne denir?","orta"),
  ("Orman yangını telefon ihbar hattı numarası nedir?","177"),
  ("Seyatnamenin yazarı kimdir?","Evliya Çelebi"),
  ("Balık tutma aracı, bir ip ya da misinaya bağlanan, ucuna metal bir çengel iğne takarak ırmak, deniz veya göllerde balık tutmaya yarayan aracın adı nedir?","olta"),
@@ -35,8 +36,16 @@ sorular=[("Motorsuz uçağa ne ad verilir?","planör"),
  ("Çocukların en güzel sokak oyunlarının başında gelir. Bir kişinin gözlerinin bağlanarak diğer oyuncuları yakalamaya çalıştığı oyunun adı nedir?","körebe")]
 
 
-#yarışmacıyla tanışalım ve açıklamalar
+#yarışmacıyla tanışalım
 ad=input("Yarışmamıza hoş geldiniz. İsminiz nedir? : ")
+print("Soru havuzunda toplam %i soru var." %len(sorular))
+while True:
+  ssayi=int(input("Size kaç soru sormamızı istersiniz? : "))
+  if ssayi>len(sorular):
+    print("Henüz kütüphanemizde o kadar soru yok.. Lütfen en fazla %i'e kadar giriş yapın." %len(sorular))
+  else:
+    break
+
 print("Merhaba %s, sana toplamda %i soru soracağım. Bu sorulardan en az %i tanesine doğru cevap verirsen yarışmayı kazanmış olacaksın." %(ad.upper(),ssayi,ssayi/2))
 print("Eğer istersen yarışmayı kazandığında soru bankamıza sende soru ekleyebilirsin..")
 print("Soruları cevaplarken özel isimlerin baş harflerini büyük harf yazmaya dikkat et.")
@@ -79,8 +88,8 @@ while devam:
       devam=devammi()  
 
   else:
-    print("Üzgünüm %s, başarısız oldunuz." %ad.upper())
-    print("Yarışmada sadece [%i] puan kazandınız.." %int(puan))
+    print("Üzgünüm %s başarısız oldunuz." %ad.upper())
+    print("Yarışmada sadece %i puan kazandınız.." %int(puan))
     print("{:} numaralı sorulara yanlış cevap verdiniz.".format(yanlis))
     devam=devammi() 
   
